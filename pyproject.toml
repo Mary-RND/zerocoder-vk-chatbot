@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zerocoder-vk-chatbot"
+version = "1.0.0"
+description = "VK chatbot-консультант университета Zerocoder на базе GigaChat API"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "vk-api>=11.10.1",
+    "gigachat>=0.2.3",
+    "python-dotenv>=1.2.3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[project.scripts]
+zerocoder-bot = "zerocoder_bot.bot:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
