@@ -60,5 +60,6 @@ def main() -> None:
         )
         logger.info("Response sent to peer_id=%s", peer_id)
 
- if __name__ == "__main__":
+
+if __name__ == "__main__":
     main()
